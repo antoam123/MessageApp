@@ -1,0 +1,19 @@
+<body>
+  <div class="container">
+    <header>
+      <h1>Message</h1>
+      {{> loginButtons}}
+      {{#if currentUser}}
+      <form class="frmPostMessage">
+        <input type="text" name="txtMessage" placeholder="post message" />
+        <button name="btnPostMessage">Send</button>
+      </form>
+      {{/if}}
+    </header>
+    <ul>
+      {{#each messages}}
+      {{> messageList}}
+      {{/each}}
+    </ul>
+  </div>
+</body>
